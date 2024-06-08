@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Page.master.cs" Inherits="WebApplication.Page" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="CSS/Projeto.css" rel="stylesheet" />
+    <link href="CSS/StyleSheet.css" rel="stylesheet" />
+    <!-- PARA CRIAR SLIDES -->
+    <!-- http://flexslider.woothemes.com/index.html -->
+    <link href="JavaScript/flexslider.css" rel="stylesheet" />
+    <script src="JavaScript/jquery-1.7.2.min.js"></script>
+    <script src="JavaScript/flexslider.min.js"></script>
+
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <!-- Cabeçalho -->
+        <div class="cabecalho">
+            <div class="logomarca">
+                <a href="../Default.aspx">
+                    <img width="30%" src="../Novas%20imagens/icons8-claquete-branco.png" />
+                    <br />
+
+                </a>
+            </div>
+            <div class="barra-titulo content-wrap">
+                <font color="white">- NEW FILMES - FATEC - </font>
+            </div>
+            <div class="barra-menu">
+                <a href="../Default.aspx"><font color="white">Home</font></a>
+                <a href="~/Admin/CadastroUsuarios.aspx"><font color="white">  <runat="server" id="Usuarios" visible="false" >Usuário</font></a>
+                <a href="../Sobre.aspx"><font color="white">Sobre Nós</font></a>
+                <a href="../Contato.aspx"><font color="white">Fale Conosco</font></a>
+                <a href="../Login.aspx"><font color="white"> <runat="server" id="Login" >Login</font></a>
+                <a href="../Sair.aspx"><font color="white"> <runat="server" id="Sair" >Sair</font></a>
+
+            </div>
+        </div>
+        <hr />
+        <!-- Linha horizontal--!>
+        <!-- conteudo -->
+        <div class="conteudo content-wrap">
+            <asp:ContentPlaceHolder ID="Conteudo" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- rodape -->
+        <div class="rodape">
+            <div class="row content-wrap">
+                <div class="col-4">
+                    <div class="box margin-right-20">
+                        <h2>Fatec Americana</h2>
+                        <h4>Analise de Filmes e Séries</h4>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="box margin-right-20">
+                        <h3>Menu</h3>
+                        <hr />
+                        <a href="../Default.aspx"><font color="white">Home</font></a>
+                        <br />
+                        <a href="../Sobre.aspx"><font color="white">Sobre Nós</font></a>
+                        <br />
+                        <a href="../Contato.aspx"><font color="white">Fale Conosco</font></a>
+                        <br />
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="box text-align-right ">
+                        <img src="../Novas%20imagens/icons8-claquete-branco.png" />
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </form>
+</body>
+</html>
